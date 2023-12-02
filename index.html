@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Myrmecia</title>
+    <style>
+        body{
+            background-color: #FF00FF;
+        }
+        .thin{
+            width: 10px;
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+            background-color: aqua;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+        .aside{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            background-color: #A000FF;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 80px;
+            width: 120px;
+        }
+        .container1{
+            display: grid;
+            grid-template-columns: 100px 1fr;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: 1fr 10px 1fr 10px;
+            position: absolute;
+            left: 130px; /*120px for snug against aside*/
+            right: 0;
+            bottom: 0;
+            top: 80px;
+        }
+        .left{
+            float: left;
+            width: 300px;
+            padding: 0;
+        }
+        .right{
+            float: right;
+            width: 100px;
+            padding: 10px;
+        }
+        .rickky{ /*all hail rickky*/
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding-right: 30px;
+            display: flex;
+            justify-content: right;
+        }
+
+        .sizing{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>My website!</h1>
+    </header>
+    <div class="container1">
+        <aside class="aside">
+            <p><a href="newpagetest.html">New page!</a></a></p>
+            <p><a href="myrmecialist.html">Do you like ants?!</a></p>
+            <p>fgjjk rhjgkldf klbhd fkasfl basdfl</p>
+            <p>a3</p>
+        </aside>
+        <main class="main">
+            <div><p>Myrmecia pyriformis</p><a class="sizing" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img class="sizing" src="https://www.antwiki.org/wiki/images/thumb/3/30/Myrmecia_pyriformis_13_%28Alex_Wild%29.jpg/550px-Myrmecia_pyriformis_13_%28Alex_Wild%29.jpg" width="600px"></a></div>
+            <p></p>
+            <p>Rick Astley<br><br><video width="100%" autoplay muted>
+                <source src="rickroll.mp4" type="video/mp4">
+            </video></p>
+            <p></p>
+            <p>b4</p>
+            <p>b3</p>
+        </main>
+    </div>
+<script>
+    /*document.querySelector(".yt").play()*/
+</script>
+</body>
+</html>
