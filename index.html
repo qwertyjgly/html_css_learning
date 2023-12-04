@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <title>Myrmecia</title>
     <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
-        }
         body{
             background-color: #FF00FF;
         }
@@ -23,7 +18,6 @@
             left: 0;
             right: 0;
             top: 0;
-            height: 40px;
         }
         .aside{
             display: flex;
@@ -35,7 +29,7 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            top: 40px;
+            top: 80px;
             width: 120px;
         }
         .container1{
@@ -49,7 +43,7 @@
             left: 130px; /*120px for snug against aside*/
             right: 0;
             bottom: 0;
-            top: 45px;
+            top: 80px;
         }
         .left{
             float: left;
@@ -89,25 +83,33 @@
         <main class="main">
             <div><p>Myrmecia pyriformis</p><a class="sizing" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img class="sizing" src="https://www.antwiki.org/wiki/images/thumb/3/30/Myrmecia_pyriformis_13_%28Alex_Wild%29.jpg/550px-Myrmecia_pyriformis_13_%28Alex_Wild%29.jpg" width="600px"></a></div>
             <p></p>
-            <p>Best video (real)<br><br><video loop width="100%" id="rickrollID">
-                <source src="rickroll.mp4" type="video/mp4">
-            </video><button onclick="playVideo()">Play</button>  <button onclick="pauseVideo()">Pause</button>  <button onclick="restartVideo()">Restart</button></p>
+            <div>
+                Rick Astley
+                <br><br>
+                <video width="100%" id="rickVideo">
+                    <source src="rickroll.mp4" type="video/mp4">
+                </video>
+                <button onclick="playPauseVideo()">Play/pause</button>  <button onclick="restartVideo()">Restart</button>
+            </div>
             <p></p>
             <p>b4</p>
             <p>b3</p>
         </main>
     </div>
 <script>
-    function playVideo() {
-        var video = document.getElementById("rickrollID");
-        video.play();
-    }
-    function pauseVideo() {
-        var video = document.getElementById("rickrollID");
-        video.play();
+    const video = document.querySelector("#rickVideo");
+    function playPauseVideo() {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
     }
     function restartVideo() {
-        var video=document.getElementById("rickrollID");
+        video.pause();
+        video.muted = false;
+        video.currentTime = 0;
+        video.load();
         video.play();
     }
 </script>
